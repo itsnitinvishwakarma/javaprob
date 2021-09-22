@@ -1,0 +1,23 @@
+#include<stdio.h>
+#define MAX 10
+#include<string.h>
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    int ph;
+    cin>>ph;
+    if(ph <7)
+    {
+        cout<<"pH value is low partial water change required ";
+    }
+    else if(ph >=7 && ph <= 8)
+        cout<<"pH value is fine";
+    else
+    {
+
+        cout<<"pH value is high partial water change required ";
+        }
+        return 0;
+}

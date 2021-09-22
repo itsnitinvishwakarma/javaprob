@@ -1,0 +1,32 @@
+#include<stdio.h>
+#define MAX 10
+#include<string>
+#include<iostream>
+using namespace std;
+
+int doubledigit(int num)
+{
+    if (num==0)
+    {
+        return 0;
+    }
+    else
+    {
+        return stoi(to_string(doubledigit(num/10)) + to_string(num%10) + to_string(num%10));
+    }
+}
+
+int main()
+{
+    int number;
+    cin>>number;
+    if (number<0)
+    {
+        cout<<"-"<<doubledigit(-number);
+    }
+    else
+    {
+        cout<<doubledigit(number);
+    }
+    return 0;
+}

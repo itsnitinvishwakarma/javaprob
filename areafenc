@@ -1,0 +1,54 @@
+#include<stdio.h>
+#define MAX 10
+#include<string.h>
+#include<iostream>
+using namespace std;
+
+void square(int s)
+{
+    cout<<"area of Square area for the chickens:"<<s*s;
+}
+
+void rect(int ll,int bb)
+{
+    cout<<"area for Rectangular area for cows:"<<ll*bb;
+}
+
+void circle(int r)
+{
+    cout<<"area for circular area for ducks:"<<3.14*r*r;
+}
+int main()
+{
+    int in;
+    cout<<"Select an option from list to calculate area of fence\n";
+    cout<<"1. Square area for the chickens\n";
+    cout<<"2. Circular area for ducks\n";
+    cout<<"3. Rectangular area for cows\n";
+    cin>>in;
+    switch(in)
+    {
+
+    case 1:
+        int side;
+        cout<<"enter side:";
+        cin>>side;
+        square(side);
+        break;
+    case 2:
+        int r;
+        cout<<"enter radius:";
+        cin>>r;
+        circle(r);
+        break;
+    case 3:
+        int l,b;
+        cout<<"enter length and breadth:";
+        cin>>l>>b;
+        rect(l,b);
+        break;
+    default:
+        cout<<"invalid choice";    }
+
+    return 0;
+}
